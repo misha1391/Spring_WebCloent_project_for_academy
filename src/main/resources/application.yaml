@@ -1,3 +1,24 @@
 spring:
   application:
     name: dashboard
+  datasource:
+    url: jdbc:h2:mem:dashboarddb
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+
+logging:
+  level:
+    com.example.dashboard: DEBUG
+
+dashboard:
+  sources:
+    weather-url: https://api.open-meteo.com/v1/forecast?latitude=55.75&longitude37.62&current_weather=true
+    iss-url: https://api.open-notify.org/iss-now.json
+    github-url: https://api.github.com/repos/spring-projects/spring-boot

@@ -1,14 +1,14 @@
 package com.example.dashboard.client.dto;
 
 public record OpenMeteoResponse (
-        double latitude,
-        double longitude,
+        Double latitude,
+        Double longitude,
         CurrentWeather currentWeather
 ) {
     public record CurrentWeather (
-            double temp,
-            double windspeed,
-            int weathercode
+            Double temp,
+            Double windspeed,
+            Integer weathercode
     ) {}
 
 }

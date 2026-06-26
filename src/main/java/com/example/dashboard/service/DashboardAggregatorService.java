@@ -44,7 +44,7 @@ public class DashboardAggregatorService {
         githubFuture.join().ifPresent(g -> {
             snapshot.setGitHubStars(g.star_count());
         });
-        snapshot.setGottenAt(LocalDateTime.now());
+        snapshot.setGetAt(LocalDateTime.now());
         DashboardSnapshot saved = dashboardSnapshotRepository.save(snapshot);
 
         log.info("Снапшот #{}, сохранен, погода - {}, МКС - ({}, {}), звезды - {}",

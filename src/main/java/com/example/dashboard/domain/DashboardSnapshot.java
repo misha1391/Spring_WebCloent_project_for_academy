@@ -24,5 +24,5 @@ public class DashboardSnapshot {
     private String issLatitude;
     private String issLongitude;
     private Integer gitHubStars;
-    private LocalDateTime gottenAt;
+    private LocalDateTime getAt;
 }
